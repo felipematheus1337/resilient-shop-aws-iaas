@@ -7,3 +7,10 @@ spring:
       username: admin
       password: admin123
       authentication-database: admin
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
