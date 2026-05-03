@@ -16,6 +16,7 @@ public class OrderUseCase {
 
     public OrderUseCase(MongoTemplate mongoTemplate) {
         this.mongoTemplate = mongoTemplate;
+        System.out.println("MongoTemplate injetado: " + mongoTemplate.getDb().getName());
     }
 
     public void createOrders(List<Order> orders) {
