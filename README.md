@@ -21,27 +21,11 @@ O objetivo deste projeto é praticar, de forma didática, a montagem de uma arqu
 
 ---
 
-## Arquitetura planejada
+## 🏗️ Arquitetura
 
-Fluxo principal:
-
-```text
-User / Browser
-    ↓
-Internet
-    ↓
-Application Load Balancer - HTTP :80
-    ↓
-Target Group
-    ↓
-EC2 App 1 / EC2 App 2 / EC2 App 3
-    ↓
-EC2 MongoDB
-```
-
-A aplicação Spring Boot é executada em containers Docker dentro de instâncias EC2. O MongoDB fica em uma EC2 separada, idealmente em subnet privada. O Load Balancer recebe o tráfego externo e encaminha apenas para instâncias saudáveis registradas no Target Group.
-
----
+<p align="center">
+  <img src="https://github.com/felipematheus1337/resilient-shop-aws-iaas/blob/dev/arquitetura.png?raw=true" alt="Arquitetura do projeto" width="900" />
+</p>
 
 ## Componentes utilizados
 
